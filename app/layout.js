@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
           <li>
             <Link href="/team">team</Link>
           </li>
+          <li>
+            <Link href="/team/about">about team</Link>
+          </li>
         </ul>
         {children}
       </body>

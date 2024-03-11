@@ -6,7 +6,7 @@ export default function page() {
       <h2 className="font-bold"> main team</h2>
       <ul className="">
         <li className="list-item underline">
-          <Link href="/team/layout">about team</Link>
+          <Link href="/team/about">about team</Link>
         </li>
       </ul>
     </div>
