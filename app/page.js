@@ -1,3 +1,9 @@
+import Link from "next/link";
+
 export default function Home() {
-  return <div>main page</div>;
+  return (
+    <main>
+      <h2 className="font-bold"> main page</h2>
+    </main>
+  );
 }
