@@ -22,7 +22,7 @@ export function SkeletonInput() {
 
 export function SkeletonList({ amount, children }) {
   return (
-    <div className="space-y-2">
+    <div className="px-3 grid gap-3 grid-cols-[repeat(auto-fill,minmax(400px,1fr))]  ">
       {Array.from({ length: amount }).map((_, i) => (
         <Fragment key={i}>{children}</Fragment>
       ))}

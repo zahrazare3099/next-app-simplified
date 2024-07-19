@@ -3,15 +3,19 @@ import { Skeleton, SkeletonButton } from "./Skeleton";
 
 export function PostCard({ id, title, content }) {
   return (
-    <div className="p-3 rounded-lg border-slate-400 bg-slate-600 text-slate-200 flex flex-col">
-      <div className="font-bold">{title}</div>
-      <div className="p-3 rounded-lg border-slate-400 bg-slate-600 text-slate-200 flex flex-col">
-        <div className="font-xs text-gray-400">{content}</div>
-      </div>
-      <div className="flex flex-row-reverse">
-        <Link className="btn" href={`/posts/${id}`}>
-          View
-        </Link>
+    <div className="p-3 rounded-lg border-slate-400 bg-slate-600 text-slate-200 flex flex-col justify-between">
+      <div className="font-bold p-1 font-serif">{title}</div>
+      <div className="flex flex-col items-baseline justify-between">
+        <div className="p-3 rounded-lg border-slate-400 bg-slate-600 text-slate-200 flex flex-col">
+          <div className="font-xs text-gray-300">
+            {content.slice(0, 250).concat("...")}
+          </div>
+        </div>
+        <div className="w-full flex flex-row-reverse">
+          <Link className="btn" href={`/posts/${id}`}>
+            View
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -19,12 +23,15 @@ export function PostCard({ id, title, content }) {
 
 export function SkeletonPostCard() {
   return (
-    <div className="p-3 rounded-lg border-slate-400 bg-slate-600 text-slate-200 flex flex-col">
-      <div className="font-bold">
+    <div className="p-3 rounded-lg border-slate-400 bg-slate-600 text-slate-200 flex flex-col justify-between">
+      <div className="">
         <Skeleton short />
       </div>
       <div className="p-3 rounded-lg border-slate-400 bg-slate-600 text-slate-200 flex flex-col">
-        <div className="font-xs text-gray-400">
+        <div className="font-xs text-gray-400 ">
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
           <Skeleton />
         </div>
       </div>
